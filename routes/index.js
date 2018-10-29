@@ -8,8 +8,8 @@ router.use("/api", apiRoutes);
 router.use("/auth", authRoutes);
 
 // If no API routes are hit, send the React app
-router.get('/movielist/:username', (req, res) => {
-	res.sendFile(path.join(__dirname, '/client/build/index.html'));
+router.get('*', (req, res) => {
+	res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
 module.exports = router;
